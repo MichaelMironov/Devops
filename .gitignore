@@ -12,3 +12,11 @@
 /.DS_Store
 /.ansible_vault_pass
 inventory.ini
+
+.gradle
+build
+/build
+!gradle/wrapper/gradle-wrapper.jar
+!gradle/wrapper/gradle-wrapper.properties
+!/src/main//build/
+!/src/test/**/build/
