@@ -1,0 +1,8 @@
+[vm]
+%{ for ip in vm ~}
+${ip}
+%{ endfor ~}
+
+[all:vars]
+ansible_ssh_common_args='-o StrictHostKeyChecking=accept-new'
+ansible_user = ubuntu

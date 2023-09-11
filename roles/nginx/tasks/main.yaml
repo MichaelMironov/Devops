@@ -1,0 +1,25 @@
+---
+- name: install nginx
+  ansible.builtin.apt:
+    name: nginx
+    update_cache: yes
+- name: start nginx
+  service:
+    name: nginx
+    state: started
+    enabled: yes
+
+- name: Copy assets
+  ansible.builtin.copy:
+    src: assets
+    dest: /var/www/html/
+    mode: '0644'
+
+- name: Copy index.html
+  ansible.builtin.copy:
+    src: index.html
+    dest: /var/www/html/
+    mode: '0644'
+  notify: reload nginx
+
+

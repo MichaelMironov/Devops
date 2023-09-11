@@ -1,0 +1,6 @@
+---
+- name: Setup nginx with apidoc homepage
+  hosts: all
+  become: true
+  roles:
+    - nginx
