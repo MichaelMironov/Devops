@@ -1,0 +1,14 @@
+*.tfvars
+*.tfvars.json
+*.key
+*.lock*
+*.iml
+*.log
+
+*.tfstate
+*.tfstate.backup
+/.terraform
+/.idea
+/.DS_Store
+/.ansible_vault_pass
+inventory.ini
